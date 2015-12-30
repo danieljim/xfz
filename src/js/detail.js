@@ -9,6 +9,7 @@ $(document).ready(function() {
 		},
 
 		bind : function() {
+			var _this = this;
 
 		    // 初始化swiper
 		    var swiper = new Swiper('.swiper-container', {
@@ -17,17 +18,35 @@ $(document).ready(function() {
 		    });
 
 		    // 点击投资人按钮
-		    this.$touEntrance.on('click', function() {
-		    	window.location.href="src/tpl/list.html"
+		    _this.$touEntrance.on('click', function() {
+		    	_this.$swiperWrapper.fadeOut();
 		    });
 
 		    // 点击创业者按钮
-		    this.$chuangEntrance.on('click', function() {
-		    	
+		    _this.$chuangEntrance.on('click', function() {
+		    	_this.$swiperWrapper.fadeOut();
 		    });
 
 		}
 	};
+	// 投资者事件
+	var tou = {
+		init :function() {
+
+		},
+		bind :function() {
+
+		}
+	};
+	// 创业者事件
+	var chuang = {
+		init :function() {
+
+		},
+		bind :function() {
+
+		}
+	}
 
 	swipe.init();
 });
