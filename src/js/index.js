@@ -31,6 +31,7 @@ $(document).ready(function() {
 
 	swipe.init();
 
+	
 	var WeixinApi = (function () {
 
 	    "use strict";
