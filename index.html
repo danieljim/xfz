@@ -43,7 +43,6 @@
             </div>
         </div>
     </div>
-</body>
 <script type="text/javascript" src="src/js/lib/jquery.min.js"></script>
 <script type="text/javascript" src="src/js/lib/swiper.min.js"></script>
 <!-- <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -98,62 +97,61 @@
 
     //以下为js加载部分
     with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-    alert(1)
+    alert(2)
 </script>
 <script>
-// 判断是否在电脑打开
-(function(){
-    function isPc() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-                    "SymbianOS", "Windows Phone",
-                    "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                var script = document.createElement("script");
-                script.src = "src/js/index.js";
-                document.body.appendChild(script);
-                autoWidth();
-                break;
+    // 判断是否在电脑打开
+    (function(){
+        function isPc() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                        "SymbianOS", "Windows Phone",
+                        "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    var script = document.createElement("script");
+                    script.src = "src/js/index.js";
+                    document.body.appendChild(script);
+                    autoWidth();
+                    break;
+                }
             }
+            return flag;
         }
-        return flag;
-    }
-    // 适应屏幕宽度
-    function autoWidth() {
-        var docEle = document.documentElement,
-            initWidth = 320, initSize = 100,
-            resizeEvent = 'orientationchange' in window ?'orientationchange' : 'resize';
+        // 适应屏幕宽度
+        function autoWidth() {
+            var docEle = document.documentElement,
+                initWidth = 320, initSize = 100,
+                resizeEvent = 'orientationchange' in window ?'orientationchange' : 'resize';
 
-        var container = document.getElementById('js-swiper-container');
+            var container = document.getElementById('js-swiper-container');
 
-        function init(win) {
-          var w = win.innerWidth,
-              h = win.innerHeight;
+            function init(win) {
+              var w = win.innerWidth,
+                  h = win.innerHeight;
 
-          docEle.style.fontSize = w / initWidth * initSize + 'px';
-          container.style.height = h + 'px';
+              docEle.style.fontSize = w / initWidth * initSize + 'px';
+              container.style.height = h + 'px';
+            }
+
+            window.addEventListener('orientationchange', function(e) {
+              e.preventDefault();
+              if (Math.abs(window.orientation) === 90) {
+                alert('为了您更好的体验，请不要使用横屏浏览');
+              }
+            }, false);
+
+            window.addEventListener(resizeEvent, function(e) {
+              init(window);
+            }, false);
+
+            init(window);
         }
-
-        window.addEventListener('orientationchange', function(e) {
-          e.preventDefault();
-          if (Math.abs(window.orientation) === 90) {
-            alert('为了您更好的体验，请不要使用横屏浏览');
-          }
-        }, false);
-
-        window.addEventListener(resizeEvent, function(e) {
-          init(window);
-        }, false);
-
-        init(window);
-    }
-    isPc();
-})();
-
-
+        isPc();
+    })();
+</body>
 
 </script>
 </html>
