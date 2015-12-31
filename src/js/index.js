@@ -480,8 +480,8 @@ $(document).ready(function() {
 	 
 	    // 微信分享的数据
 	    var wxData = {
-	        "imgUrl":'www.danieljim.github.io/xfz/src/imgs/logo-icon.png',
-	        "link":'www.danieljim.github.io/xfz',
+	        "imgUrl":'http://danieljim.github.io/xfz/src/imgs/logo-icon.png',
+	        "link":'http://danieljim.github.io/xfz',
 	        "desc":'年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！',
 	        "title":"邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！"
 	    };
