@@ -18,12 +18,12 @@ $(document).ready(function() {
 
 		    // 点击投资人按钮
 		    this.$touEntrance.on('click', function() {
-		    	window.location.href="src/tpl/list.html"
+		    	window.location.href="src/tpl/list.html?from=tou";
 		    });
 
 		    // 点击创业者按钮
 		    this.$chuangEntrance.on('click', function() {
-		    	
+		    	window.location.href="src/tpl/list.html?from=chuang";
 		    });
 
 		}

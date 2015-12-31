@@ -1,9 +1,11 @@
 html,body{margin: 0;padding: 0;width: 100%;height: 100%;}
 .swiper-container, .swiper-slide{width: 100%;height: 100%;overflow: hidden;position: relative;}
 
-.swiper-container{background: url(../imgs/bg-3.png) no-repeat;width: 100%;height: 100%;background-size: 100% 100%;}
-.head-rule-img{position:relative;background: url(../imgs/title-time.png) no-repeat;width: 2.8rem;height: 1rem;background-size: 100% 100%;margin: 0.5rem auto 0;}
-.head-rule-img a{position: absolute;bottom: 0;right: 0;width: 0.7rem;height: 0.2rem;}
+body{background: url(../imgs/bg-3.png) no-repeat;width: 100%;height: 100%;background-size: 100% 100%;}
+.head-rule-img{position:relative;background: url(../imgs/title.png) no-repeat;width: 2.8rem;height: 0.7rem;background-size: 100% 100%;margin: 0.5rem auto 0;}
+.head-time{font-size: 0.12rem;overflow: hidden;margin-top: 0.05rem;}
+.head-time span{float: left;margin-left: 0.2rem;}
+.head-time a{float:right;margin-right:0.2rem;text-decoration: none;color: #f29c9f}
 
 .list-1,.list-2,.list-3,.list-4,.list-5,.list-6{overflow: hidden;padding: 0;margin: 0;list-style: none;font-size: 0.12rem;margin-top: 0.2rem;}
 .swiper-slide li{width: 33.2%;float: left;position: relative;}
@@ -15,4 +17,7 @@ html,body{margin: 0;padding: 0;width: 100%;height: 100%;}
 .swiper-slide li .company{margin: 0.05rem 0}
 .swiper-slide li .position{margin: 0.05rem 0;}
 
-
+.rule{font-size: 0.12rem;display: none;width: 90%;margin:0.2rem auto 0;color: #333;}
+.rule ul{padding-left: 0.2rem;margin: 0.05rem 0 0.2rem;}
+.rule ul li{width: 100%;float: none;line-height: 0.16rem;}
+.back{width: 1rem;height: 0.35rem;color: #f29c9f;line-height: 0.35rem;text-align: center;border: 1px solid #999;position: absolute;bottom: 0.2rem;margin-left: -0.5rem;left: 50%;border-radius: 0.05rem;}

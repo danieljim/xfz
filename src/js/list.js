@@ -3,6 +3,8 @@ $(document).ready(function() {
 	var tou = {
 		init : function() {
 			this.$swiperWrapper = $('.swiper-wrapper');
+			this.$rule = $('.look-rule');
+			this.$back = $('.back');
 			this.bind();
 		},
 
@@ -20,6 +22,20 @@ $(document).ready(function() {
 		    	var uid = $self.data('uid');
 		    	window.location.href="detail.html?uid="+uid;
 		    });
+
+		    this.$rule.on('click', function() {
+		    	$('.rule').show();
+		    	$('.step-1').siblings().hide();
+		    	$('.list-1').hide();
+		    	$('.head-time').hide();
+		    });
+
+		    this.$back.on('click',function() {
+		    	$('.rule').hide();
+		    	$('.step-1').siblings().show();
+		    	$('.list-1').show();
+		    	$('.head-time').show();
+		    })
 
 		}
 	};
