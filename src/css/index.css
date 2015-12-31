@@ -2,7 +2,7 @@ html,body{margin: 0;padding: 0;width: 100%;height: 100%;}
 .swiper-container,.swipe-wrapper,.swiper-slide{width: 100%;height: 100%;overflow: hidden;position: relative;}
 
 .step-1{background: url(../imgs/bg-1.png) no-repeat;width: 100%;height: 100%;background-size: 100% 100%;}
-.step-1 .home-des{background: url(../imgs/home-des.png) no-repeat;width: 1.6rem;height: 1.6rem;background-size: 100%;margin: 2rem auto;-webkit-transform: translate3D(0, 0, 0);}
+.step-1 .home-des{background: url(../imgs/home-des.png) no-repeat;width: 1.6rem;height: 1.6rem;background-size: 100%;margin: 2rem auto 0;-webkit-transform: translate3D(0, 0, 0);}
 .step-1.swiper-slide-active .home-des{-webkit-transform: translate3D(0, -0.45rem, 0);-webkit-transition: -webkit-transform .8s ease-in-out;}
 
 .step-2{font-size: 0.18rem;background: url(../imgs/bg-2.png) no-repeat;width: 100%;height: 100%;background-size: 100% 100%;}
@@ -17,3 +17,5 @@ html,body{margin: 0;padding: 0;width: 100%;height: 100%;}
 .step-2 .go-meeting{background: #c0c0d1;width: 40%;height: 0.3rem;text-align: center;line-height: 0.3rem;border-radius: 5px;position: absolute;bottom: 0.3rem;left: 50%;margin-left: -20%;}
 .step-2 .go-meeting a{color: #6593be;text-decoration: none;font-style: italic;font-size: 0.15rem;}
 
+.down{background: url(../imgs/down.png) no-repeat;position: absolute;bottom: 0.1rem;left: 50%;
+margin-left: -0.2rem;width: 0.4rem;height: 0.2rem;background-size: 100% 100%;}
