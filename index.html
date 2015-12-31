@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>小饭桌创业春晚</title>
+	<title>邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！</title>
     <meta name="keywords" content="小饭桌创业春晚">
-    <meta name="description" content="小饭桌创业春晚">
+    <meta name="description" content="年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！">
 	<meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="webkit" name="renderer">
@@ -97,7 +97,54 @@
         init(window);
     }
     isPc();
+
+    var wxtitle='邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！';
+    var wxurl=location.href;
+    var wximgUrl='www.danieljim.github.io/xfz/src/imgs/logo-icon.png';
+    var wxdesc="年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！";
+    $(function(){
+        // var url=encodeURIComponent(location.href.split('#')[0]);
+        // $.get('/index.php?s=Weixin/signstr&url='+url,function(data){
+        //     callback(data);
+        // },'json');
+        
+        function callback(config){
+            
+            // wx.config(config);
+            wx.ready(function(){
+                //分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title: wxtitle, // 分享标题
+                    link: wxlink, // 分享链接
+                    imgUrl: wximgUrl, // 分享图标
+                    success: function () {
+                        
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                //分享给朋友
+                wx.onMenuShareAppMessage({
+                    title: wxtitle, // 分享标题
+                    desc: wxdesc, // 分享描述
+                    link: wxlink, // 分享链接
+                    imgUrl: wximgUrl, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () { 
+                        
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+            }); 
+        }
+    })
 })();
+
+
 
 </script>
 </html>
