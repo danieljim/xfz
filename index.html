@@ -45,61 +45,58 @@
     </div>
 <script type="text/javascript" src="src/js/lib/jquery.min.js"></script>
 <script type="text/javascript" src="src/js/lib/swiper.min.js"></script>
-<!-- <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
     var wxtitle='邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！';
-    var wxurl=location.href;
+    var wxurl=window.location.href.split('#')[0];
+    wxurl=wxurl.replace(/(&|\?)wxfrom=([^&]*)/ig,'');
+    wxurl=wxurl.replace(/(&|\?)topfrom=([^&]*)/ig,'');
+    var wxlink=wxurl+'o2SRus9JWjH_gmTm2QNvRXlVtZLQ';
     var wximgUrl='http://danieljim.github.io/xfz/src/imgs/logo-icon.png';
     var wxdesc="年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！";
-    (function(){
-        wx.ready(function(){
-            //分享到朋友圈
-            wx.onMenuShareTimeline({
-                title: wxtitle, // 分享标题
-                link: wxlink, // 分享链接
-                imgUrl: wximgUrl, // 分享图标
-                success: function () {
-                    window.location.reload();
-                },
-                cancel: function () { 
-                    // 用户取消分享后执行的回调函数
-                }
+    $(function(){
+         // var url=encodeURIComponent(location.href.split('#')[0]);
+         // $.get('/index.php?s=Weixin/signstr&url='+url,function(data){
+         //    callback(data);
+         // },'json');
+        
+        function callback(){
+            
+            // wx.config(config);
+            wx.ready(function(){
+                //分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title: wxtitle, // 分享标题
+                    link: wxlink, // 分享链接
+                    imgUrl: wximgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                //分享给朋友
+                wx.onMenuShareAppMessage({
+                    title: wxtitle, // 分享标题
+                    desc: wxdesc, // 分享描述
+                    link: wxlink, // 分享链接
+                    imgUrl: wximgUrl, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () { 
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
             });
-            //分享给朋友
-            wx.onMenuShareAppMessage({
-                title: wxtitle, // 分享标题
-                desc: wxdesc, // 分享描述
-                link: wxlink, // 分享链接
-                imgUrl: wximgUrl, // 分享图标
-                type: '', // 分享类型,music、video或link，不填默认为link
-                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-                success: function () { 
-                    window.location.reload();
-                },
-                cancel: function () { 
-                    // 用户取消分享后执行的回调函数
-                }
-            });
-        }); 
-    })();
-</script>-->
-<script type="text/javascript">
-    var url = window.location.href;
-    window._bd_share_config = {
-        "common":{
-            "bdText":"邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！",
-            "bdDesc" : '年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！',
-            "bdMini":"3",
-            "bdMiniList":false,
-            "bdPic":"http://danieljim.github.io/xfz/src/imgs/logo-icon.png",
-            "bdStyle":"0",
-            "bdSize":"16"
-        },
-        "share":{}
-    }
-    //以下为js加载部分
-    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-    alert(3)
+          
+        }
+        callback();
+    })
+
 </script>
 <script>
     // 判断是否在电脑打开
