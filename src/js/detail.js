@@ -1,52 +1,58 @@
 $(document).ready(function() {
-	// 首页和入口页面的滑动
-	var swipe = {
+	// 创业者事件
+	var chuang = {
 		init : function() {
-			this.$swiperWrapper = $('.swiper-wrapper');
-			this.$touEntrance = $('.tou-entrance');
-			this.$chuangEntrance = $('.chuang-entrance');
+			this.piaoStatus = true; 
+			this.$backHome = $('.back-home');
+			this.$otherPerson = $('.other-person');
+			this.$touPiao = $('.tou-piao');
+			this.$bangPiao = $('.bang-piao');
+			this.$piaoCount = $('.piao-count');
+			this.$share = $('.share');
+			// 投过之后就不再进行投票了
+			if(this.$touPiao.data('status') == 1) {
+				this.$touPiao.css({
+					'background' : '#ccc'
+				}).html('已投票');
+				this.piaoStatus = false;
+			}
 			this.bind();
 		},
 
 		bind : function() {
 			var _this = this;
 
-		    // 初始化swiper
-		    var swiper = new Swiper('.swiper-container', {
-		      	direction: 'vertical',
-		      	loop: false
+		    // 点击投票
+		    _this.$touPiao.on('click', function() {
+		    	if(_this.piaoStatus == false) {
+		    		return;
+		    	}else{
+		    		var count = Number(_this.$piaoCount.text());
+			    	count++;
+			    	_this.$piaoCount.html(count);
+			    	$(this).css({
+						'background' : '#ccc'
+					}).html('已投票');
+					_this.piaoStatus = false;
+		    	}
 		    });
 
-		    // 点击投资人按钮
-		    _this.$touEntrance.on('click', function() {
-		    	_this.$swiperWrapper.fadeOut();
+		    // 帮忙拉票
+		    _this.$bangPiao.on('click', function() {
+		    	_this.$share.show();
 		    });
 
-		    // 点击创业者按钮
-		    _this.$chuangEntrance.on('click', function() {
-		    	_this.$swiperWrapper.fadeOut();
+		    // 返回首页
+		    _this.$backHome.on('click', function() {
+		    	window.location.href="../../index.html";
 		    });
 
-		}
-	};
-	// 投资者事件
-	var tou = {
-		init :function() {
-
-		},
-		bind :function() {
-
-		}
-	};
-	// 创业者事件
-	var chuang = {
-		init :function() {
-
-		},
-		bind :function() {
-
+		    // 查看其它人
+		    _this.$otherPerson.on('click', function() {
+		    	window.location.href="list.html";
+		    });
 		}
 	}
 
-	swipe.init();
+	chuang.init();
 });

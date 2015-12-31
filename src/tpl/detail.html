@@ -17,34 +17,39 @@
     <meta content="True" name="HandheldFriendly">
     <meta content="320" name="MobileOptimized">
 
-    <link rel="stylesheet" type="text/css" href="../css/list.css">
-    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/detail.css">
 </head>
 <body>
     <div class="swiper-container" id="js-swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide step-1">
-                <div class="home-des"></div>
-            </div>
-            <div class="swiper-slide step-2">
-                <div class="entrance-des"></div>
-                <div class="entrance tou-entrance">
-                    <span>年度新锐投资人投票</span>
-                    <span class="arrow"></span>
+            <div class="swiper-slide">
+                <div class="head-rule-img">
+                    <a href="#"></a>
                 </div>
-                <div class="entrance chuang-entrance">
-                    <span>年度最具人气创业者投票</span>
-                    <span class="arrow"></span>
+                <div class="content" data-uid="1">
+                    <div class="photo">
+                        <img src="http://img2.3lian.com/2014/f5/158/d/87.jpg">
+                    </div>
+                    <div class="piao-count">100</div>
+                    <div class="name">王东杰</div>
+                    <div class="company">北京子木投资顾问有限公司</div>
+                    <div class="position">前端开发</div>
+                    <div class="des">我是小饭桌的创业者，巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</div>
                 </div>
-                <div class="go-meeting">
-                    <a href="">我要去现场</a>
+                <div class="piao-button">
+                    <span class="tou-piao" data-status="0">立即投票</span>
+                    <span class="bang-piao">帮忙投票</span>
+                </div>
+                <div class="other">
+                    <span class="back-home">返回首页</span>
+                    <span class="other-person">查看其它候选人 ></span>
                 </div>
             </div>
         </div>
     </div>
+    <div class="share"></div>
 </body>
 <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
-<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
 <script>
 // 判断是否在电脑打开
 (function(){
@@ -58,7 +63,7 @@
             if (userAgentInfo.indexOf(Agents[v]) > 0) {
                 flag = false;
                 var script = document.createElement("script");
-                script.src = "../js/list.js";
+                script.src = "../js/detail.js";
                 document.body.appendChild(script);
                 autoWidth();
                 break;

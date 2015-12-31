@@ -1,10 +1,27 @@
-html,body{margin: 0;padding: 0;width: 100%;height: 100%;background: #39217e;}
-.swiper-container,.swipe-wrapper,.swiper-slide{width: 100%;height: 100%;overflow: hidden;position: relative;}
-.step-2{font-size: 0.18rem;}
-.step-2 .arrow{background: url(../imgs/right.png) no-repeat;width: 0.12rem;height: 0.18rem;background-size: 100%;display: inline-block;vertical-align: middle;}
-.step-2 .entrance-des{background: url(../imgs/entrance-des.png) no-repeat;width: 90%;height: 2.6rem;margin: 0.1rem auto 0;background-size: 100%;}
-.step-2 .entrance{width: 80%;margin: 0.2rem auto;text-align: center;height: 0.4rem;border: 1px solid #fff;border-radius: 5px;line-height: 0.4rem;color: #fff;}
-.step-2 .tou-entrance{margin-top: 0.3rem;}
-.step-2 .go-meeting{background: #c0c0d1;width: 40%;height: 0.3rem;text-align: center;line-height: 0.3rem;border-radius: 5px;position: absolute;bottom: 0.3rem;left: 50%;margin-left: -20%;}
-.step-2 .go-meeting a{color: #6593be;text-decoration: none;font-style: italic;font-size: 0.15rem;}
+html,body{margin: 0;padding: 0;width: 100%;height: 100%;}
+.swiper-container,.swiper-wrapper,.swiper-slide{width: 100%;height: 100%;overflow: hidden;position: relative;}
 
+.swiper-container{background: url(../imgs/bg-3.png) no-repeat;width: 100%;height: 100%;background-size: 100% 100%;}
+.head-rule-img{position:relative;background: url(../imgs/head-rule-img.png) no-repeat;width: 2.8rem;height: 1rem;background-size: 100% 100%;margin: 0.5rem auto 0;}
+.head-rule-img a{position: absolute;bottom: 0;right: 0;width: 0.7rem;height: 0.2rem;}
+
+/*.list-1{overflow: hidden;padding: 0;margin: 0;list-style: none;font-size: 0.12rem;margin-top: 0.2rem;}*/
+.content{width: 100%;font-size: 0.1rem;margin-top:0.1rem;}
+.content div{text-align: center;}
+.content .photo{width: 1.5rem;height:1.5rem;margin: auto;}
+.content img{width: 100%;height: 100%;border-radius: 0.76rem;}
+.content .piao-count{width:0.8rem;height: 0.25rem;background: #56c0f1;color: #fff;text-align: center;line-height: 0.25rem;margin: -0.15rem auto 0;position: relative;z-index: 999}
+.content .name{margin-top: 0.1rem;margin-bottom: 0.05rem;font-size: 0.18rem;}
+.content .company{margin: 0.05rem 0}
+.content .position{margin: 0.05rem 0;}
+.content .des{width: 94%;text-align: center;margin: auto;line-height: 0.18rem;font-size: 0.14rem;}
+.piao-button{font-size: 0.14rem;text-align: center;margin-top: 0.2rem;}
+.piao-button span{display: inline-block;width: 1.3rem;height:0.4rem;margin: 0 0.1rem;text-align: center;line-height: 0.4rem;border-radius: 0.03rem;}
+.piao-button .tou-piao{background-color: #2e395b;color: #fff;}
+.piao-button .bang-piao{background-color:#f29c9f;color: #fff;}
+
+.other{font-size: 0.14rem;position: absolute;bottom: 0.2rem;width: 100%;overflow: hidden;color: #21527c;}
+.other .back-home{margin-left: 0.2rem;}
+.other .other-person{float: right;margin-right: 0.2rem;}
+
+.share{background: url(../imgs/share.png) no-repeat;width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;display: none;background-size: 100% 100%;z-index: 99999}
