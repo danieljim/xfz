@@ -54,11 +54,11 @@
     var shareTitle = "邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！";
 
     wx.config({
-        debug: false,//这里是开启测试，如果设置为true，则打开每个步骤，都会有提示，是否成功或者失败
-        appId: "wx67f2e191aead66f7",
+        debug: true,//这里是开启测试，如果设置为true，则打开每个步骤，都会有提示，是否成功或者失败
+        appId: "wx1570d17be62c2770",
         timestamp: "1451658077",
         nonceStr: "z2qhc114kssmq217",
-        signature: "6ca5df92e2f36490b18d27963ffb23e6dc2f2573",
+        signature: "52cebdf61f190ac6775781d13128e9f4",
         jsApiList: [
           // 所有要调用的 API 都要加到这个列表中
             'onMenuShareTimeline',
@@ -75,6 +75,7 @@
             imgUrl: imgUrl, // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
+                alert(1)
             },
             cancel: function () {
                 // 用户取消分享后执行的回调函数
