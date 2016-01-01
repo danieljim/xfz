@@ -45,60 +45,82 @@
     </div>
 <script type="text/javascript" src="src/js/lib/jquery.min.js"></script>
 <script type="text/javascript" src="src/js/lib/swiper.min.js"></script>
-<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
 
-    var wxtitle='邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！';
-    var wxurl=window.location.href.split('#')[0];
-    wxurl=wxurl.replace(/(&|\?)wxfrom=([^&]*)/ig,'');
-    wxurl=wxurl.replace(/(&|\?)topfrom=([^&]*)/ig,'');
-    var wxlink=wxurl+'o2SRus9JWjH_gmTm2QNvRXlVtZLQ';
-    var wximgUrl='http://danieljim.github.io/xfz/src/imgs/logo-icon.png';
-    var wxdesc="年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！";
-    $(function(){
-         // var url=encodeURIComponent(location.href.split('#')[0]);
-         // $.get('/index.php?s=Weixin/signstr&url='+url,function(data){
-         //    callback(data);
-         // },'json');
-        
-        function callback(){
-            
-            // wx.config(config);
-            wx.ready(function(){
-                //分享到朋友圈
-                wx.onMenuShareTimeline({
-                    title: wxtitle, // 分享标题
-                    link: wxlink, // 分享链接
-                    imgUrl: wximgUrl, // 分享图标
-                    success: function () {
-                        // 用户确认分享后执行的回调函数
-                        alert(2);
-                    },
-                    cancel: function () { 
-                        // 用户取消分享后执行的回调函数
-                    }
-                });
-                //分享给朋友
-                wx.onMenuShareAppMessage({
-                    title: wxtitle, // 分享标题
-                    desc: wxdesc, // 分享描述
-                    link: wxlink, // 分享链接
-                    imgUrl: wximgUrl, // 分享图标
-                    type: '', // 分享类型,music、video或link，不填默认为link
-                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-                    success: function () { 
-                        // 用户确认分享后执行的回调函数
-                    },
-                    cancel: function () { 
-                        // 用户取消分享后执行的回调函数
-                    }
-                });
-            });
-          
-        }
-        callback();
+    var imgUrl = "http://danieljim.github.io/xfz/src/imgs/logo-icon.png";
+    var lineLink = window.location.href;
+    var descContent = "年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！";
+    var shareTitle = "邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！";
+
+    wx.config({
+        debug: false,//这里是开启测试，如果设置为true，则打开每个步骤，都会有提示，是否成功或者失败
+        appId: "wx67f2e191aead66f7",
+        timestamp: "1451658077",
+        nonceStr: "z2qhc114kssmq217",
+        signature: "6ca5df92e2f36490b18d27963ffb23e6dc2f2573",
+        jsApiList: [
+          // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo'
+        ]
     });
-</script>-->
+
+    wx.ready(function () {
+        wx.onMenuShareTimeline({
+            title: shareTitle, // 分享标题
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareAppMessage({
+            title: shareTitle, // 分享标题
+            desc: descContent, // 分享描述
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQQ({
+            title: shareTitle, // 分享标题
+            desc: descContent, // 分享描述
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+               // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+               // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareWeibo({
+            title: shareTitle, // 分享标题
+            desc: descContent, // 分享描述
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+               // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+    
+</script>
 <script>
     // 判断是否在电脑打开
     (function(){
