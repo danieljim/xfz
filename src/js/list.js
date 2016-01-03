@@ -8,7 +8,7 @@ $(document).ready(function() {
 	                           '<img src="http://img2.3lian.com/2014/f5/158/d/87.jpg">'+
 	                        '</div>'+
 	                        '<div class="piao-count">100</div>'+
-	                        '<div class="name">王东杰</div>'+
+	                        '<div class="name"></div>'+
 	                        '<div class="company">北京子木投资顾问有限公司</div>'+
 	                        '<div class="position">前端开发</div>'+
 	                    '</li>'+
@@ -20,9 +20,9 @@ $(document).ready(function() {
 		                            '<img src="{{data.simgUrl}}">'+
 		                        '</div>'+
 		                        '<div class="piao-count">100</div>'+
-		                        '<div class="name">王东杰</div>'+
-		                        '<div class="company">北京子木投资顾问有限公司</div>'+
-		                        '<div class="position">前端开发</div>'+
+		                        '<div class="name">{{data.name}}</div>'+
+		                        '<div class="company">{{data.company}}</div>'+
+		                        '<div class="position">{{data.position}}</div>'+
 		                    '</li>'+
 		                '</ul>'+
 		            '</div>'
@@ -68,31 +68,25 @@ $(document).ready(function() {
 						            "mainTitle": "",
 						            "subTitle": "",
 						            "simgUrl": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
-						            "imgUrl": "",
-						            "bimgUrl": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_2000x250.jpg",
-						            "clickUrl": "http://tuan.qunar.com/static/topics/hotel/qixi/index.html",
-						            "enable": true,
-						            "sort": 1,
-						            "updateTime": 1443496880000
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
 						        },
 						        {
-						            "id": 14,
+						            "id": 16,
 						            "mainTitle": "",
 						            "subTitle": "",
-						            "simgUrl": "http://spimg.qunarzz.com/gongyu/20150721/clzs2.jpg",
-						            "imgUrl": "",
-						            "bimgUrl": "http://spimg.qunarzz.com/gongyu/20150721/clzsg.jpg",
-						            "clickUrl": "http://tuan.qunar.com/static/topics/hotel/chailvzhusu/index.html?from=gysy",
-						            "enable": true,
-						            "sort": 2,
-						            "updateTime": 1442471883000
+						            "simgUrl": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
 						        }
 						    ]
 						} ;
 			var first = template.compile(tpl.otherPage),
-                html = render({data : data[0]});
+                html = render({data : data.data[0]});
             $('.step-1').append(html);
-
+            _this.bind();
 		},
 
 		bind : function() {
