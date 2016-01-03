@@ -16,12 +16,12 @@ $(document).ready(function() {
 		otherPage : '<ul class="list-2">'+
 	                    '<li>'+
 	                        '<div class="photo">'+
-	                            '<img src="{{data.simgUrl}}">'+
+	                            '<img src="<%=data.simgUrl%>">'+
 	                        '</div>'+
 	                        '<div class="piao-count">100</div>'+
-	                        '<div class="name">{{data.name}}</div>'+
-	                        '<div class="company">{{data.company}}</div>'+
-	                        '<div class="position">{{data.position}}</div>'+
+	                        '<div class="name"><%=data.name%></div>'+
+	                        '<div class="company"><%=data.company%></div>'+
+	                        '<div class="position"><%=data.position%></div>'+
 	                    '</li>'+
 	                '</ul>'
 		            
