@@ -5,19 +5,29 @@
     <meta name="keywords" content="小饭桌创业春晚">
     <meta name="description" content="年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！">
 	<meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="webkit" name="renderer">
+    <meta content="user-scalable=no,width=device-width,initial-scale=1.0" name="viewport">
+    <meta content="小饭桌" name="apple-mobile-web-app-title">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="pc,mobile" name="applicable-device">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
-    
-    <link rel="stylesheet" type="text/css" href="src/css/swiper.min.css">
+    <meta content="True" name="HandheldFriendly">
+    <meta content="320" name="MobileOptimized">
+
     <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/css/swiper.min.css">
 </head>
 <body>
-    <img style="position: absolute;top:-999rem;" src="http://chuantu.biz/t2/23/1451821886x1822611383.png" width="500" height="500" alt="" />
+    <img style="position: absolute;top:-999rem;" src="http://simg1.qunarzz.com/asp/topics/20151104/logo_share.jpg" width="500" height="500" alt="" />
     <div class="swiper-container" id="js-swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide step-1">
+                <div class="logo" style="width:0;height:0">
+                    <img src="src/imgs/logo-icon.png" style="width:0;height:0">
+                </div>
                 <div class="home-des"></div>
                 <div class="down"></div>
             </div>
@@ -39,7 +49,6 @@
     </div>
 <script type="text/javascript" src="src/js/lib/jquery.min.js"></script>
 <script type="text/javascript" src="src/js/lib/swiper.min.js"></script>
-<script type="text/javascript" src="src/js/index.js"></script>
 <!--<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
 
@@ -117,33 +126,56 @@
     
 </script>-->
 <script>
+    // 判断是否在电脑打开
     (function(){
-        var docEle = document.documentElement,
-            initWidth = 320, initSize = 100,
-            resizeEvent = 'orientationchange' in window ?'orientationchange' : 'resize';
-
-        var container = document.getElementById('js-swiper-container');
-
-        function init(win) {
-          var w = win.innerWidth,
-              h = win.innerHeight;
-
-          docEle.style.fontSize = w / initWidth * initSize + 'px';
-          container.style.height = h + 'px';
+        function isPc() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                        "SymbianOS", "Windows Phone",
+                        "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    var script = document.createElement("script");
+                    script.src = "src/js/index.js";
+                    document.body.appendChild(script);
+                    autoWidth();
+                    break;
+                }
+            }
+            return flag;
         }
+        // 适应屏幕宽度
+        function autoWidth() {
+            var docEle = document.documentElement,
+                initWidth = 320, initSize = 100,
+                resizeEvent = 'orientationchange' in window ?'orientationchange' : 'resize';
 
-        window.addEventListener('orientationchange', function(e) {
-          e.preventDefault();
-          if (Math.abs(window.orientation) === 90) {
-            alert('为了您更好的体验，请不要使用横屏浏览');
-          }
-        }, false);
+            var container = document.getElementById('js-swiper-container');
 
-        window.addEventListener(resizeEvent, function(e) {
-          init(window);
-        }, false);
+            function init(win) {
+              var w = win.innerWidth,
+                  h = win.innerHeight;
 
-        init(window);
+              docEle.style.fontSize = w / initWidth * initSize + 'px';
+              container.style.height = h + 'px';
+            }
+
+            window.addEventListener('orientationchange', function(e) {
+              e.preventDefault();
+              if (Math.abs(window.orientation) === 90) {
+                alert('为了您更好的体验，请不要使用横屏浏览');
+              }
+            }, false);
+
+            window.addEventListener(resizeEvent, function(e) {
+              init(window);
+            }, false);
+
+            init(window);
+        }
+        isPc();
     })();
 </script>
 </body>
