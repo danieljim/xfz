@@ -65,7 +65,10 @@ $(document).ready(function() {
 		    // 初始化swiper
 		    var swiper = new Swiper('.swiper-container', {
 		      	direction: 'vertical',
-		      	loop: false
+		      	loop: false,
+		      	onTouchMove: function(swiper){
+			    	alert('haha')
+			    }
 		    });
 
 		    // 点击进入详情
