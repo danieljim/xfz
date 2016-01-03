@@ -45,7 +45,7 @@
     </div>
 <script type="text/javascript" src="src/js/lib/jquery.min.js"></script>
 <script type="text/javascript" src="src/js/lib/swiper.min.js"></script>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!--<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
 
     var imgUrl = "http://u.moimg.net/project/project_20151228_1451315221_9882_400x300.jpg";
@@ -54,8 +54,8 @@
     var shareTitle = "邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！";
 
     wx.config({
-        debug: true,//这里是开启测试，如果设置为true，则打开每个步骤，都会有提示，是否成功或者失败
-        appId: "wx1570d17be62c2770",
+        debug: false,//这里是开启测试，如果设置为true，则打开每个步骤，都会有提示，是否成功或者失败
+        appId: "wx69d328f59a7d7dda",
         timestamp: "1451658077",
         nonceStr: "z2qhc114kssmq217",
         signature: "52cebdf61f190ac6775781d13128e9f4",
@@ -120,6 +120,25 @@
         });
     });
     
+</script>
+-->
+<script language="javascript" type="text/javascript"> function WeiXinShareBtn() { 
+if (typeof WeixinJSBridge == "undefined") {
+    alert("请先通过微信搜索 ****添加****为好友，通过微信分享文章");
+} else {
+    WeixinJSBridge.invoke('shareTimeline', {
+        "title": "邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！",
+        "link": window.location.href,
+        "desc": "年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！",
+        "img_url": "http://u.moimg.net/project/project_20151228_1451315221_9882_400x300.jpg"
+    });
+    WeixinJSBridge.invoke('shareAppMessage', {
+        "title": "邀请你给小饭桌创业春晚-年度新锐投资人和最具人气创业者投票！",
+        "link": window.location.href,
+        "desc": "年度新锐投资人和最具人气创业者都在这里了，赶紧来投出你的选票！",
+        "img_url": "http://u.moimg.net/project/project_20151228_1451315221_9882_400x300.jpg"
+    };
+}
 </script>
 <script>
     // 判断是否在电脑打开
