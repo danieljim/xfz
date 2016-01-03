@@ -84,7 +84,7 @@ $(document).ready(function() {
 						} ;
 			var first = template.compile(tpl.otherPage),
                 html = first({data : data.data[0]});
-            $('.step-2').html(11111111);
+            $('.step-2').html(html);
             _this.bind();
 		},
 
