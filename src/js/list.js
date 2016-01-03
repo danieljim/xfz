@@ -13,19 +13,18 @@ $(document).ready(function() {
 	                        '<div class="position">前端开发</div>'+
 	                    '</li>'+
 	                '</ul>',
-		otherPage : '<div class="swiper-slide">'+
-		                '<ul class="list-2">'+
-		                    '<li>'+
-		                        '<div class="photo">'+
-		                            '<img src="{{data.simgUrl}}">'+
-		                        '</div>'+
-		                        '<div class="piao-count">100</div>'+
-		                        '<div class="name">{{data.name}}</div>'+
-		                        '<div class="company">{{data.company}}</div>'+
-		                        '<div class="position">{{data.position}}</div>'+
-		                    '</li>'+
-		                '</ul>'+
-		            '</div>'
+		otherPage : '<ul class="list-2">'+
+	                    '<li>'+
+	                        '<div class="photo">'+
+	                            '<img src="{{data.simgUrl}}">'+
+	                        '</div>'+
+	                        '<div class="piao-count">100</div>'+
+	                        '<div class="name">{{data.name}}</div>'+
+	                        '<div class="company">{{data.company}}</div>'+
+	                        '<div class="position">{{data.position}}</div>'+
+	                    '</li>'+
+	                '</ul>'
+		            
 	};
 
 	// 投资者事件
@@ -85,7 +84,7 @@ $(document).ready(function() {
 						} ;
 			var first = template.compile(tpl.otherPage),
                 html = render({data : data.data[0]});
-            $('.step-1').append(html);
+            $('.step-2').html(html);
             _this.bind();
 		},
 
