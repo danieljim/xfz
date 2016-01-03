@@ -9,7 +9,7 @@ $(document).ready(function() {
 		},
 
 		bind : function() {
-			alert(3)
+			alert(5)
 		    // 初始化swiper
 		    var swiper = new Swiper('.swiper-container', {
 		      	direction: 'vertical',
