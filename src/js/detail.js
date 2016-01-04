@@ -139,7 +139,7 @@ $(document).ready(function() {
 		            window.reload();
 		        }
 		 	});
-		};
+		},
 
 		postChuangVote : function(data) {
 			var _this = this;
@@ -156,7 +156,7 @@ $(document).ready(function() {
 		            window.reload();
 		        }
 		 	});
-		};
+		},
 
 		bind : function() {
 			var _this = this;
