@@ -127,6 +127,7 @@ $(document).ready(function() {
 		init : function() {
 			var url = window.location.href;
 			if(url.indexOf('tou') > 0) {
+				$('.step-6').hide();
 				this.getTouList();
 			}else if(url.indexOf('chuang') > 0) {
 				this.getChuangList();
@@ -1089,13 +1090,6 @@ $(document).ready(function() {
 			                	list : listArr5
 			                });
 			            $('.step-5').html(html5);
-			            
-			    	}else if(id == 6) {
-			    		var first6 = template.compile(touTpl.list),
-			                html6 = first6({
-			                	list : listArr6
-			                });
-			            $('.step-6').html(html6);
 			            
 			    	}
 			    	_this.bind();
