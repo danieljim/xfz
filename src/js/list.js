@@ -401,7 +401,7 @@ $(document).ready(function() {
 		      	direction: 'vertical',
 		      	loop: false,
 		      	onSlideChangeStart: function(swiper){
-		      		alert($('.swiper-slide').index());
+		      		alert($('.swiper-slide-active').data('id'));
 			    	
 			    }
 		    });
