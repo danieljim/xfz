@@ -460,7 +460,7 @@ $(document).ready(function() {
 			    }
 		    });
 			
-            
+            _this.bind();
 		},
 
 		bind : function() {
