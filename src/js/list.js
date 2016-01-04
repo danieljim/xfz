@@ -6,8 +6,8 @@ $(document).ready(function() {
                     '<span>投票时间：1月4日－10日</span>'+
                     '<a class="look-rule">查看投票规则</a>'+
                 '</div>'+
-                '<%for(var i=0;i<list.length;i++){%>'+
                 '<ul class="listUl">'+
+                '<%for(var i=0;i<list.length;i++){%>'+
                     '<li>'+
                         '<div class="photo">'+
                             '<img src="<%=list[i].photo%>">'+
@@ -17,8 +17,8 @@ $(document).ready(function() {
                         '<div class="company"><%=list[i].company%></div>'+
                         '<div class="position"><%=list[i].position%></div>'+
                     '</li>'+
+                    '<%}%>'+
                 '</ul>'+
-                '<%}%>'+
                 '<div class="rule">'+
                     '<div>'+
                         '<div>参选标准</div>'+
@@ -48,8 +48,8 @@ $(document).ready(function() {
                     '<div class="back">立即投票</div>'+
                 '</div>',
 
-		list : 	'<%for(var i=0;i<list.length;i++){%>'+
-					'<ul class="listUl">'+
+		list : 	'<ul class="listUl">'+
+					'<%for(var i=0;i<list.length;i++){%>'+
 	                    '<li>'+
 	                        '<div class="photo">'+
 	                            '<img src="<%=list[i].photo%>">'+
@@ -59,8 +59,9 @@ $(document).ready(function() {
 	                        '<div class="company"><%=list[i].company%></div>'+
 	                        '<div class="position"><%=list[i].position%></div>'+
 	                    '</li>'+
-	                '</ul>'+
-	            '<%}%>',
+	                '<%}%>'+
+	            '</ul>',
+	            
 		            
 	};
 
