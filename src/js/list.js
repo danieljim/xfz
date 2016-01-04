@@ -1176,7 +1176,12 @@ $(document).ready(function() {
 		    $('.swiper-wrapper').off().on('click', 'li', function() {
 		    	var $self = $(this);
 		    	var uid = $self.data('uid');
-		    	window.location.href="detail.html?uid="+uid;
+		    	var url = window.location.href;
+		    	if(url.indexOf('tou') > 0) {
+					window.location.href="detail.html?from=tou&uid="+uid;
+				}else if(url.indexOf('chuang') > 0) {
+					window.location.href="detail.html?from=chuang&uid="+uid;
+				}
 		    });
 
 		    $('.look-rule').off().on('click', function() {
