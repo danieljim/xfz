@@ -6,7 +6,7 @@ $(document).ready(function() {
                     '<span>投票时间：1月4日－10日</span>'+
                     '<a class="look-rule">查看投票规则</a>'+
                 '</div>'+
-                '<ul class="listUl>'+
+                '<ul class="listUl">'+
                     '<li>'+
                         '<div class="photo">'+
                             '<img src="<%=data.photo%>">'+
