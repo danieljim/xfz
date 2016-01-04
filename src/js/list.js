@@ -409,32 +409,32 @@ $(document).ready(function() {
 			                });
 			            $('.step-1').html(html);
 			    	}else if(id == 2) {
-			    		var first = template.compile(tpl.list),
-			                html = first({
+			    		var first2 = template.compile(tpl.list),
+			                html2 = first2({
 			                	list : listArr2
 			                });
 			            $('.step-2').html(html);
 			    	}else if(id == 3) {
-			    		var first = template.compile(tpl.list),
-			                html = first({
+			    		var first3 = template.compile(tpl.list),
+			                html3 = first3({
 			                	list : listArr3
 			                });
 			            $('.step-3').html(html);
 			    	}else if(id == 4) {
-			    		var first = template.compile(tpl.list),
-			                html = first({
+			    		var first4 = template.compile(tpl.list),
+			                html4 = first4({
 			                	list : listArr4
 			                });
 			            $('.step-4').html(html);
 			    	}else if(id == 5) {
-			    		var first = template.compile(tpl.list),
-			                html = first({
+			    		var first5 = template.compile(tpl.list),
+			                html5 = first5({
 			                	list : listArr5
 			                });
 			            $('.step-5').html(html);
 			    	}else if(id == 6) {
-			    		var first = template.compile(tpl.list),
-			                html = first({
+			    		var first6 = template.compile(tpl.list),
+			                html6 = first6({
 			                	list : listArr6
 			                });
 			            $('.step-6').html(html);
