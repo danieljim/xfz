@@ -396,7 +396,15 @@ $(document).ready(function() {
 			// var listArr4 = [data.data[18]];
 			// var listArr5 = [data.data[24]];
 			// var listArr6 = [data.data[30]];
-
+			// 初始化swiper
+		    var swiper = new Swiper('.swiper-container', {
+		      	direction: 'vertical',
+		      	loop: false,
+		      	onSlideChangeStart: function(swiper){
+		      		alert($('.swiper-slide').index());
+			    	
+			    }
+		    });
 			var first = template.compile(tpl.first),
                 html = first({
                 	list : listData.data[0]
@@ -407,15 +415,6 @@ $(document).ready(function() {
 
 		bind : function() {
 			var _this = this;
-		    // 初始化swiper
-		    var swiper = new Swiper('.swiper-container', {
-		      	direction: 'vertical',
-		      	loop: false,
-		      	onSlideChangeStart: function(swiper){
-		      		alert($('.swiper-slide').index());
-			    	_this.dealList();
-			    }
-		    });
 
 		    // 点击进入详情
 		    this.$swiperWrapper.on('click', 'li', function() {
