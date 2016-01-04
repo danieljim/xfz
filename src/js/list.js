@@ -420,43 +420,44 @@ $(document).ready(function() {
 			                	list : listArr1
 			                });
 			            $('.step-1').html(html);
-			            _this.bind();
+			            
 			    	}else if(id == 2) {
 			    		var first2 = template.compile(tpl.list),
 			                html2 = first2({
 			                	list : listArr2
 			                });
 			            $('.step-2').html(html2);
-			            _this.bind();
+			            
 			    	}else if(id == 3) {
 			    		var first3 = template.compile(tpl.list),
 			                html3 = first3({
 			                	list : listArr3
 			                });
 			            $('.step-3').html(html3);
-			            _this.bind();
+			            
 			    	}else if(id == 4) {
 			    		var first4 = template.compile(tpl.list),
 			                html4 = first4({
 			                	list : listArr4
 			                });
 			            $('.step-4').html(html4);
-			            _this.bind();
+			            
 			    	}else if(id == 5) {
 			    		var first5 = template.compile(tpl.list),
 			                html5 = first5({
 			                	list : listArr5
 			                });
 			            $('.step-5').html(html5);
-			            _this.bind();
+			            
 			    	}else if(id == 6) {
 			    		var first6 = template.compile(tpl.list),
 			                html6 = first6({
 			                	list : listArr6
 			                });
 			            $('.step-6').html(html6);
-			            _this.bind();
+			            
 			    	}
+			    	_this.bind();
 			    }
 		    });
 			
