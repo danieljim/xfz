@@ -206,7 +206,12 @@ $(document).ready(function() {
 
 		    // 返回首页
 		   	$('.back-home').on('click', function() {
-		    	window.location.href="../../index.html";
+		   		var url = window.location.href;
+		   		if(url.indexOf('tou') > 0) {
+					window.location.href="../../index.html?from=tou";
+				}else if(url.indexOf('chuang') > 0) {
+					window.location.href="../../index.html?from=chuang";
+				}
 		    });
 
 		    // 查看其它人
