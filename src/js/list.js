@@ -9,12 +9,12 @@ $(document).ready(function() {
                 '<ul class="listUl">'+
                     '<li>'+
                         '<div class="photo">'+
-                            '<img src="<%=data.photo%>">'+
+                            '<img src="<%=list.photo%>">'+
                         '</div>'+
                         '<div class="piao-count">100</div>'+
-                        '<div class="name"><%=data.name%></div>'+
-                        '<div class="company"><%=data.company%></div>'+
-                        '<div class="position"><%=data.position%></div>'+
+                        '<div class="name"><%=list.name%></div>'+
+                        '<div class="company"><%=list.company%></div>'+
+                        '<div class="position"><%=list.position%></div>'+
                     '</li>'+
                 '</ul>'+
                 '<div class="rule">'+
