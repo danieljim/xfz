@@ -52,7 +52,7 @@ $(document).ready(function() {
 					'<ul class="listUl">'+
 	                    '<li>'+
 	                        '<div class="photo">'+
-	                            '<img src="<%=list[i].simgUrl%>">'+
+	                            '<img src="<%=list[i].photo%>">'+
 	                        '</div>'+
 	                        '<div class="piao-count">100</div>'+
 	                        '<div class="name"><%=list[i].name%></div>'+
