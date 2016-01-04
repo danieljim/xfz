@@ -48,7 +48,7 @@ $(document).ready(function() {
                     '<div class="back">立即投票</div>'+
                 '</div>',
 
-		list : 	'<ul class="listUl">'+
+		other : 	'<ul class="listUl">'+
 					'<%for(var i=0;i<list.length;i++){%>'+
 	                    '<li data-uid="<%=list[i].uid%>">'+
 	                        '<div class="photo">'+
@@ -1063,37 +1063,35 @@ $(document).ready(function() {
 			            $('.step-1').html(html);
 			            
 			    	}else if(id == 2) {
-			    		console.log(touTpl.list);
-			    		console.log(listArr2);
-			    		var first2 = template.compile(touTpl.list),
+			    		var first2 = template.compile(touTpl.other),
 			                html2 = first2({
 			                	list : listArr2
 			                });
 			            $('.step-2').html(html2);
 			            
 			    	}else if(id == 3) {
-			    		var first3 = template.compile(touTpl.list),
+			    		var first3 = template.compile(touTpl.other),
 			                html3 = first3({
 			                	list : listArr3
 			                });
 			            $('.step-3').html(html3);
 			            
 			    	}else if(id == 4) {
-			    		var first4 = template.compile(touTpl.list),
+			    		var first4 = template.compile(touTpl.other),
 			                html4 = first4({
 			                	list : listArr4
 			                });
 			            $('.step-4').html(html4);
 			            
 			    	}else if(id == 5) {
-			    		var first5 = template.compile(touTpl.list),
+			    		var first5 = template.compile(touTpl.other),
 			                html5 = first5({
 			                	list : listArr5
 			                });
 			            $('.step-5').html(html5);
 			            
 			    	}else if(id == 6) {
-			    		var first6 = template.compile(touTpl.list),
+			    		var first6 = template.compile(touTpl.other),
 			                html6 = first6({
 			                	list : listArr6
 			                });
