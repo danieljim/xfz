@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 		list : 	'<ul class="listUl">'+
 					'<%for(var i=0;i<list.length;i++){%>'+
-	                    '<li >'+
+	                    '<li data-uid="<%=list[i].uid%>">'+
 	                        '<div class="photo">'+
 	                            '<img src="<%=list[i].photo%>">'+
 	                        '</div>'+
@@ -1063,6 +1063,8 @@ $(document).ready(function() {
 			            $('.step-1').html(html);
 			            
 			    	}else if(id == 2) {
+			    		console.log(touTpl.list);
+			    		console.log(listArr2);
 			    		var first2 = template.compile(touTpl.list),
 			                html2 = first2({
 			                	list : listArr2
