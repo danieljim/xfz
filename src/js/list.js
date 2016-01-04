@@ -16,7 +16,7 @@ $(document).ready(function() {
                         '<div class="company"><%=data.company%></div>'+
                         '<div class="position"><%=data.position%></div>'+
                     '</li>'+
-                '</ul>'
+                '</ul>'+
                 '<div class="rule">'+
                     '<div>'+
                         '<div>参选标准</div>'+
