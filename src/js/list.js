@@ -48,7 +48,7 @@ $(document).ready(function() {
                     '<div class="back">立即投票</div>'+
                 '</div>',
 
-		other : 	'<ul class="listUl">'+
+		list : 	'<ul class="listUl">'+
 					'<%for(var i=0;i<list.length;i++){%>'+
 	                    '<li data-uid="<%=list[i].uid%>">'+
 	                        '<div class="photo">'+
@@ -1035,7 +1035,7 @@ $(document).ready(function() {
 			var _this = this;
 			var listData = data;
 			var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
-			var listArr2 = [data.data[6],data.data[7],data.data[8],data.data[9],data.data[10],data.data[11],,data.data[12],,data.data[13],,data.data[14]];
+			var listArr2 = [data.data[6],data.data[7],data.data[8],data.data[9],data.data[10],data.data[11],data.data[12],data.data[13],data.data[14]];
 			var listArr3 = [data.data[15],data.data[16],data.data[17],data.data[18],data.data[19],data.data[20],data.data[21],data.data[22],data.data[23]];
 			var listArr4 = [data.data[24],data.data[25],data.data[26],data.data[27],data.data[28],data.data[29],data.data[30],data.data[31],data.data[32]];
 			var listArr5 = [data.data[33],data.data[34],data.data[35],data.data[36],data.data[37],data.data[38],data.data[39],data.data[40],data.data[41]];
@@ -1063,35 +1063,35 @@ $(document).ready(function() {
 			            $('.step-1').html(html);
 			            
 			    	}else if(id == 2) {
-			    		var first2 = template.compile(touTpl.other),
+			    		var first2 = template.compile(touTpl.list),
 			                html2 = first2({
 			                	list : listArr2
 			                });
 			            $('.step-2').html(html2);
 			            
 			    	}else if(id == 3) {
-			    		var first3 = template.compile(touTpl.other),
+			    		var first3 = template.compile(touTpl.list),
 			                html3 = first3({
 			                	list : listArr3
 			                });
 			            $('.step-3').html(html3);
 			            
 			    	}else if(id == 4) {
-			    		var first4 = template.compile(touTpl.other),
+			    		var first4 = template.compile(touTpl.list),
 			                html4 = first4({
 			                	list : listArr4
 			                });
 			            $('.step-4').html(html4);
 			            
 			    	}else if(id == 5) {
-			    		var first5 = template.compile(touTpl.other),
+			    		var first5 = template.compile(touTpl.list),
 			                html5 = first5({
 			                	list : listArr5
 			                });
 			            $('.step-5').html(html5);
 			            
 			    	}else if(id == 6) {
-			    		var first6 = template.compile(touTpl.other),
+			    		var first6 = template.compile(touTpl.list),
 			                html6 = first6({
 			                	list : listArr6
 			                });
@@ -1107,7 +1107,7 @@ $(document).ready(function() {
 			var _this = this;
 			var listData = data;
 			var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
-			var listArr2 = [data.data[6],data.data[7],data.data[8],data.data[9],data.data[10],data.data[11],,data.data[12],,data.data[13],,data.data[14]];
+			var listArr2 = [data.data[6],data.data[7],data.data[8],data.data[9],data.data[10],data.data[11],data.data[12],data.data[13],data.data[14]];
 			var listArr3 = [data.data[15],data.data[16],data.data[17],data.data[18],data.data[19],data.data[20],data.data[21],data.data[22],data.data[23]];
 			var listArr4 = [data.data[24],data.data[25],data.data[26],data.data[27],data.data[28],data.data[29],data.data[30],data.data[31],data.data[32]];
 			var listArr5 = [data.data[33],data.data[34],data.data[35],data.data[36],data.data[37],data.data[38],data.data[39],data.data[40],data.data[41]];
