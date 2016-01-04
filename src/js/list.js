@@ -6,7 +6,7 @@ $(document).ready(function() {
                     '<span>投票时间：1月4日－10日</span>'+
                     '<a class="look-rule">查看投票规则</a>'+
                 '</div>'+
-                '<ul>'+
+                '<ul class="listUl>'+
                     '<li>'+
                         '<div class="photo">'+
                             '<img src="<%=data.photo%>">'+
@@ -46,7 +46,7 @@ $(document).ready(function() {
                     '<div class="back">立即投票</div>'+
                 '</div>',
 
-		list : '<ul class="list-2">'+
+		list : '<ul class="listUl">'+
                     '<li>'+
                         '<div class="photo">'+
                             '<img src="<%=data.simgUrl%>">'+
@@ -122,7 +122,7 @@ $(document).ready(function() {
 			var first = template.compile(tpl.first),
                 html = first({data : data.data[0]});
             $('.step-1').html(html);
-            _this.bind();
+            this.bind();
 		},
 
 		bind : function() {
