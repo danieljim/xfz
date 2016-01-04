@@ -401,6 +401,13 @@ $(document).ready(function() {
 			var listArr4 = [data.data[18],data.data[19]];
 			var listArr5 = [data.data[24]];
 			var listArr6 = [data.data[30]];
+
+			var first = template.compile(tpl.first),
+                html = first({
+                	list : listArr1
+                });
+            $('.step-1').html(html);
+
 			// 初始化swiper
 		    var swiper = new Swiper('.swiper-container', {
 		      	direction: 'vertical',
