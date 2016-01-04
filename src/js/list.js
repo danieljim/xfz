@@ -49,12 +49,12 @@ $(document).ready(function() {
 		list : '<ul class="listUl">'+
                     '<li>'+
                         '<div class="photo">'+
-                            '<img src="<%=data.simgUrl%>">'+
+                            '<img src="<%=list.simgUrl%>">'+
                         '</div>'+
                         '<div class="piao-count">100</div>'+
-                        '<div class="name"><%=data.name%></div>'+
-                        '<div class="company"><%=data.company%></div>'+
-                        '<div class="position"><%=data.position%></div>'+
+                        '<div class="name"><%=list.name%></div>'+
+                        '<div class="company"><%=list.company%></div>'+
+                        '<div class="position"><%=list.position%></div>'+
                     '</li>'+
                 '</ul>'
 		            
@@ -390,7 +390,6 @@ $(document).ready(function() {
 
 		dealList : function(data) {
 			var listData = data;
-			console.log(listData.data[0])
 			// var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
 			// var listArr2 = [data.data[6]];
 			// var listArr3 = [data.data[12]];
