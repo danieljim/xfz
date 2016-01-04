@@ -60,7 +60,7 @@ $(document).ready(function() {
 	                        '<div class="position"><%=list[i].worker%></div>'+
 	                    '</li>'+
 	                '<%}%>'+
-	            '</ul>',         
+	            '</ul>'        
 	};
 	var chuangTpl = {
 		first : '<div class="chuang-title"></div>'+
@@ -118,7 +118,7 @@ $(document).ready(function() {
 	                        '<div class="position">第<%=list[i].session_number%>届桌友</div>'+
 	                    '</li>'+
 	                '<%}%>'+
-	            '</ul>',         
+	            '</ul>'        
 	};
 
 	// 投资者事件
