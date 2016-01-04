@@ -6,17 +6,19 @@ $(document).ready(function() {
                     '<span>投票时间：1月4日－10日</span>'+
                     '<a class="look-rule">查看投票规则</a>'+
                 '</div>'+
+                '<%for(var i=0;i<list.length;i++){%>'+
                 '<ul class="listUl">'+
                     '<li>'+
                         '<div class="photo">'+
-                            '<img src="<%=list.photo%>">'+
+                            '<img src="<%=list[i].photo%>">'+
                         '</div>'+
                         '<div class="piao-count">100</div>'+
-                        '<div class="name"><%=list.name%></div>'+
-                        '<div class="company"><%=list.company%></div>'+
-                        '<div class="position"><%=list.position%></div>'+
+                        '<div class="name"><%=list[i].name%></div>'+
+                        '<div class="company"><%=list[i].company%></div>'+
+                        '<div class="position"><%=list[i].position%></div>'+
                     '</li>'+
                 '</ul>'+
+                '<%}%>'+
                 '<div class="rule">'+
                     '<div>'+
                         '<div>参选标准</div>'+
@@ -46,17 +48,19 @@ $(document).ready(function() {
                     '<div class="back">立即投票</div>'+
                 '</div>',
 
-		list : '<ul class="listUl">'+
-                    '<li>'+
-                        '<div class="photo">'+
-                            '<img src="<%=list.simgUrl%>">'+
-                        '</div>'+
-                        '<div class="piao-count">100</div>'+
-                        '<div class="name"><%=list.name%></div>'+
-                        '<div class="company"><%=list.company%></div>'+
-                        '<div class="position"><%=list.position%></div>'+
-                    '</li>'+
-                '</ul>'
+		list : 	'<%for(var i=0;i<list.length;i++){%>'+
+					'<ul class="listUl">'+
+	                    '<li>'+
+	                        '<div class="photo">'+
+	                            '<img src="<%=list[i].simgUrl%>">'+
+	                        '</div>'+
+	                        '<div class="piao-count">100</div>'+
+	                        '<div class="name"><%=list[i].name%></div>'+
+	                        '<div class="company"><%=list[i].company%></div>'+
+	                        '<div class="position"><%=list[i].position%></div>'+
+	                    '</li>'+
+	                '</ul>'+
+	            '<%}%>',
 		            
 	};
 
@@ -389,6 +393,7 @@ $(document).ready(function() {
 		},
 
 		dealList : function(data) {
+			var _this = this;
 			var listData = data;
 			var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
 			var listArr2 = [data.data[6],data.data[7],data.data[8],data.data[9]];
