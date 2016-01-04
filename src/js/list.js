@@ -68,9 +68,6 @@ $(document).ready(function() {
 	var tou = {
 
 		init : function() {
-			this.$swiperWrapper = $('.swiper-wrapper');
-			this.$rule = $('.look-rule');
-			this.$back = $('.back');
 			this.getList();
 		},
 
@@ -468,20 +465,20 @@ $(document).ready(function() {
 			var _this = this;
 
 		    // 点击进入详情
-		    this.$swiperWrapper.off().on('click', 'li', function() {
+		    $('.swiper-wrapper').off().on('click', 'li', function() {
 		    	var $self = $(this);
 		    	var uid = $self.data('uid');
 		    	window.location.href="detail.html?uid="+uid;
 		    });
 
-		    this.$rule.off().on('click', function() {
+		    $('.look-rule').off().on('click', function() {
 		    	$('.rule').show();
 		    	$('.step-1').siblings().hide();
 		    	$('.list-1').hide();
 		    	$('.head-time').hide();
 		    });
 
-		    this.$back.off().on('click',function() {
+		    $('.back').off().on('click',function() {
 		    	$('.rule').hide();
 		    	$('.step-1').siblings().show();
 		    	$('.list-1').show();
