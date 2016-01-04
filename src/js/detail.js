@@ -12,18 +12,26 @@ $(document).ready(function() {
                             '<span><%=detail.worker%></span>'+
                         '</div>'+
                         '<div class="des"><%=detail.intro%></div>'+
-                    '</div>',
-        detailChuang : '<div data-uid="<%=detail.uid%>">'+
-                        '<div class="photo">'+
-                            '<img src="<%=detail.photo%>">'+
-                        '</div>'+
-                        '<div class="piao-count"><%=detail.count%></div>'+
-                        '<div class="name"><%=detail.name%>/第<%=detail.session_number%>届</div>'+
-                        '<div class="company">'+
-                            '<span><%=detail.project%></span>'+
-                        '</div>'+
-                        '<div class="des"><%=detail.intro%></div>'+
+                    '</div>'+
+                    '<div class="piao-button">'+
+                        '<span class="tou-piao" data-status="<%=detail.is_vote%>">立即投票</span>'+
+                        '<span class="bang-piao">帮忙投票</span>'+
                     '</div>'
+        detailChuang : '<div data-uid="<%=detail.uid%>">'+
+	                        '<div class="photo">'+
+	                            '<img src="<%=detail.photo%>">'+
+	                        '</div>'+
+	                        '<div class="piao-count"><%=detail.count%></div>'+
+	                        '<div class="name"><%=detail.name%>/第<%=detail.session_number%>届</div>'+
+	                        '<div class="company">'+
+	                            '<span><%=detail.project%></span>'+
+	                        '</div>'+
+	                        '<div class="des"><%=detail.intro%></div>'+
+	                    '</div>'+
+	                    '<div class="piao-button">'+
+	                        '<span class="tou-piao" data-status="0">立即投票</span>'+
+	                        '<span class="bang-piao">帮忙投票</span>'+
+	                    '</div>'
 	};
 
 	// 创业者事件
@@ -85,7 +93,7 @@ $(document).ready(function() {
 	            });
 	        $('.content').html(html);
 	        // 投过之后就不再进行投票了
-			if(this.$('.tou-piao').data('status') == 1) {
+			if(this.$('.tou-piao').data('status') == true) {
 				this.$('.tou-piao').css({
 					'background' : '#ccc'
 				}).html('已投票');
@@ -117,7 +125,7 @@ $(document).ready(function() {
 	            });
 	        $('.content').html(html);
 	        // 投过之后就不再进行投票了
-			if(this.$('.tou-piao').data('status') == 1) {
+			if(this.$('.tou-piao').data('status') == true) {
 				this.$('.tou-piao').css({
 					'background' : '#ccc'
 				}).html('已投票');
