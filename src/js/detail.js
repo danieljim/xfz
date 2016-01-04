@@ -93,8 +93,8 @@ $(document).ready(function() {
 	            });
 	        $('.content').html(html);
 	        // 投过之后就不再进行投票了
-			if(this.$('.tou-piao').data('status') == true) {
-				this.$('.tou-piao').css({
+			if($('.tou-piao').data('status') == true) {
+				$('.tou-piao').css({
 					'background' : '#ccc'
 				}).html('已投票');
 				this.piaoStatus = false;
@@ -125,8 +125,8 @@ $(document).ready(function() {
 	            });
 	        $('.content').html(html);
 	        // 投过之后就不再进行投票了
-			if(this.$('.tou-piao').data('status') == true) {
-				this.$('.tou-piao').css({
+			if($('.tou-piao').data('status') == true) {
+				$('.tou-piao').css({
 					'background' : '#ccc'
 				}).html('已投票');
 				this.piaoStatus = false;
@@ -172,14 +172,14 @@ $(document).ready(function() {
 			var _this = this;
 
 		    // 点击投票
-		    _this.$('.tou-piao').on('click', function() {
+		    $('.tou-piao').on('click', function() {
 		    	if(_this.piaoStatus == false) {
 		    		return;
 		    	}else{
-		    		var count = Number(_this.$('.piao-count').text());
+		    		var count = Number($('.piao-count').text());
 		    		var url = window.location.href;
 			    	count++;
-			    	_this.$('.piao-count').html(count);
+			    	$('.piao-count').html(count);
 			    	if(url.indexOf('tou') > 0) {
 						_this.postTouVote(count);
 					}else if(url.indexOf('chuang') > 0) {
@@ -193,24 +193,24 @@ $(document).ready(function() {
 		    });
 
 		    // 帮忙拉票
-		    _this.$('.bang-piao').on('click', function(event) {
+		    $('.bang-piao').on('click', function(event) {
 		    	event.preventDefault();
 		    	event.stopPropagation();
-		    	_this.$('.share').show();
+		    	$('.share').show();
 		    });
 
 		    // 取消分享mask
 		    $(document).on('click', function() {
-		    	_this.$('.share').hide();
+		    	$('.share').hide();
 		    });
 
 		    // 返回首页
-		    _this.$('.back-home').on('click', function() {
+		   	$('.back-home').on('click', function() {
 		    	window.location.href="../../index.html";
 		    });
 
 		    // 查看其它人
-		    _this.$('.other-person').on('click', function() {
+		    $('.other-person').on('click', function() {
 		    	window.location.href="list.html";
 		    });
 		}
