@@ -206,17 +206,17 @@ $(document).ready(function() {
 
 		    // 返回首页
 		   	$('.back-home').on('click', function() {
-		   		var url = window.location.href;
-		   		if(url.indexOf('tou') > 0) {
-					window.location.href="../../index.html?from=tou";
-				}else if(url.indexOf('chuang') > 0) {
-					window.location.href="../../index.html?from=chuang";
-				}
+		    	window.location.href="../../index.html";
 		    });
 
 		    // 查看其它人
 		    $('.other-person').on('click', function() {
-		    	window.location.href="list.html";
+		    	var url = window.location.href;
+		   		if(url.indexOf('tou') > 0) {
+					window.location.href="list.html?from=tou";
+				}else if(url.indexOf('chuang') > 0) {
+					window.location.href="list.html?from=chuang";
+				}
 		    });
 		}
 	}
