@@ -390,6 +390,7 @@ $(document).ready(function() {
 
 		dealList : function(data) {
 			var listData = data;
+			console.log(listData)
 			// var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
 			// var listArr2 = [data.data[6]];
 			// var listArr3 = [data.data[12]];
