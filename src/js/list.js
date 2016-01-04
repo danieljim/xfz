@@ -390,26 +390,58 @@ $(document).ready(function() {
 
 		dealList : function(data) {
 			var listData = data;
-			// var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
-			// var listArr2 = [data.data[6]];
-			// var listArr3 = [data.data[12]];
-			// var listArr4 = [data.data[18]];
-			// var listArr5 = [data.data[24]];
-			// var listArr6 = [data.data[30]];
+			var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
+			var listArr2 = [data.data[6],data.data[7],data.data[8],data.data[9]];
+			var listArr3 = [data.data[12],data.data[13],data.data[14]];
+			var listArr4 = [data.data[18],data.data[19]];
+			var listArr5 = [data.data[24]];
+			var listArr6 = [data.data[30]];
 			// 初始化swiper
 		    var swiper = new Swiper('.swiper-container', {
 		      	direction: 'vertical',
 		      	loop: false,
 		      	onSlideChangeStart: function(swiper){
-		      		alert($('.swiper-slide-active').data('id'));
-			    	
+		      		var id = $('.swiper-slide-active').data('id');
+			    	if(id == 1) {
+			    		var first = template.compile(tpl.first),
+			                html = first({
+			                	list : listArr1
+			                });
+			            $('.step-1').html(html);
+			    	}else if(id == 2) {
+			    		var first = template.compile(tpl.list),
+			                html = first({
+			                	list : listArr2
+			                });
+			            $('.step-2').html(html);
+			    	}else if(id == 3) {
+			    		var first = template.compile(tpl.list),
+			                html = first({
+			                	list : listArr3
+			                });
+			            $('.step-3').html(html);
+			    	}else if(id == 4) {
+			    		var first = template.compile(tpl.list),
+			                html = first({
+			                	list : listArr4
+			                });
+			            $('.step-4').html(html);
+			    	}else if(id == 5) {
+			    		var first = template.compile(tpl.list),
+			                html = first({
+			                	list : listArr5
+			                });
+			            $('.step-5').html(html);
+			    	}else if(id == 6) {
+			    		var first = template.compile(tpl.list),
+			                html = first({
+			                	list : listArr6
+			                });
+			            $('.step-6').html(html);
+			    	}
 			    }
 		    });
-			var first = template.compile(tpl.first),
-                html = first({
-                	list : listData.data[0]
-                });
-            $('.step-1').html(html);
+			
             this.bind();
 		},
 
