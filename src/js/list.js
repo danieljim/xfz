@@ -413,31 +413,31 @@ $(document).ready(function() {
 			                html2 = first2({
 			                	list : listArr2
 			                });
-			            $('.step-2').html(html);
+			            $('.step-2').html(html2);
 			    	}else if(id == 3) {
 			    		var first3 = template.compile(tpl.list),
 			                html3 = first3({
 			                	list : listArr3
 			                });
-			            $('.step-3').html(html);
+			            $('.step-3').html(html3);
 			    	}else if(id == 4) {
 			    		var first4 = template.compile(tpl.list),
 			                html4 = first4({
 			                	list : listArr4
 			                });
-			            $('.step-4').html(html);
+			            $('.step-4').html(html4);
 			    	}else if(id == 5) {
 			    		var first5 = template.compile(tpl.list),
 			                html5 = first5({
 			                	list : listArr5
 			                });
-			            $('.step-5').html(html);
+			            $('.step-5').html(html5);
 			    	}else if(id == 6) {
 			    		var first6 = template.compile(tpl.list),
 			                html6 = first6({
 			                	list : listArr6
 			                });
-			            $('.step-6').html(html);
+			            $('.step-6').html(html6);
 			    	}
 			    }
 		    });
