@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 		list : 	'<ul class="listUl">'+
 					'<%for(var i=0;i<list.length;i++){%>'+
-	                    '<li data-uid="<%=list[i].uid%>">'+
+	                    '<li >'+
 	                        '<div class="photo">'+
 	                            '<img src="<%=list[i].photo%>">'+
 	                        '</div>'+
