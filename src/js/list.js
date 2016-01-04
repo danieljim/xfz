@@ -475,14 +475,14 @@ $(document).ready(function() {
 		    $('.look-rule').off().on('click', function() {
 		    	$('.rule').show();
 		    	$('.step-1').siblings().hide();
-		    	$('.list-1').hide();
+		    	$('.listUl').hide();
 		    	$('.head-time').hide();
 		    });
 
 		    $('.back').off().on('click',function() {
 		    	$('.rule').hide();
 		    	$('.step-1').siblings().show();
-		    	$('.list-1').show();
+		    	$('.listUl').show();
 		    	$('.head-time').show();
 		    })
 
