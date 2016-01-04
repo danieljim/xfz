@@ -16,7 +16,7 @@ $(document).ready(function() {
                     '<div class="piao-button">'+
                         '<span class="tou-piao" data-status="<%=detail.is_vote%>">立即投票</span>'+
                         '<span class="bang-piao">帮忙投票</span>'+
-                    '</div>'
+                    '</div>',
         detailChuang : '<div data-uid="<%=detail.uid%>">'+
 	                        '<div class="photo">'+
 	                            '<img src="<%=detail.photo%>">'+
