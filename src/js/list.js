@@ -63,7 +63,7 @@ $(document).ready(function() {
 	            '</ul>',         
 	};
 	var chuangTpl = {
-		first : '<div class="head-rule-img"></div>'+
+		first : '<div class="chuang-title"></div>'+
                 '<div class="head-time">'+
                     '<span>投票时间：1月4日－10日</span>'+
                     '<a class="look-rule">查看投票规则</a>'+
