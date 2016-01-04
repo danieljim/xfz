@@ -29,20 +29,8 @@ $(document).ready(function() {
 	// 创业者事件
 	var chuang = {
 		init : function() {
-			this.piaoStatus = true; 
-			this.$backHome = $('.back-home');
-			this.$otherPerson = $('.other-person');
-			this.$touPiao = $('.tou-piao');
-			this.$bangPiao = $('.bang-piao');
-			this.$piaoCount = $('.piao-count');
-			this.$share = $('.share');
-			// 投过之后就不再进行投票了
-			if(this.$touPiao.data('status') == 1) {
-				this.$touPiao.css({
-					'background' : '#ccc'
-				}).html('已投票');
-				this.piaoStatus = false;
-			}
+			this.piaoStatus = true;
+			
 			var url = window.location.href;
 			if(url.indexOf('tou') > 0) {
 				this.getDetailTou();
@@ -96,6 +84,13 @@ $(document).ready(function() {
 	            	detail : data.data
 	            });
 	        $('.content').html(html);
+	        // 投过之后就不再进行投票了
+			if(this.$('.tou-piao').data('status') == 1) {
+				this.$('.tou-piao').css({
+					'background' : '#ccc'
+				}).html('已投票');
+				this.piaoStatus = false;
+			}
 	        _this.bind();
 		},
 
@@ -121,6 +116,13 @@ $(document).ready(function() {
 	            	detail : data.data
 	            });
 	        $('.content').html(html);
+	        // 投过之后就不再进行投票了
+			if(this.$('.tou-piao').data('status') == 1) {
+				this.$('.tou-piao').css({
+					'background' : '#ccc'
+				}).html('已投票');
+				this.piaoStatus = false;
+			}
 	        _this.bind();
 		},
 
@@ -162,14 +164,14 @@ $(document).ready(function() {
 			var _this = this;
 
 		    // 点击投票
-		    _this.$touPiao.on('click', function() {
+		    _this.$('.tou-piao').on('click', function() {
 		    	if(_this.piaoStatus == false) {
 		    		return;
 		    	}else{
-		    		var count = Number(_this.$piaoCount.text());
+		    		var count = Number(_this.$('.piao-count').text());
 		    		var url = window.location.href;
 			    	count++;
-			    	_this.$piaoCount.html(count);
+			    	_this.$('.piao-count').html(count);
 			    	if(url.indexOf('tou') > 0) {
 						_this.postTouVote(count);
 					}else if(url.indexOf('chuang') > 0) {
@@ -183,24 +185,24 @@ $(document).ready(function() {
 		    });
 
 		    // 帮忙拉票
-		    _this.$bangPiao.on('click', function(event) {
+		    _this.$('.bang-piao').on('click', function(event) {
 		    	event.preventDefault();
 		    	event.stopPropagation();
-		    	_this.$share.show();
+		    	_this.$('.share').show();
 		    });
 
 		    // 取消分享mask
 		    $(document).on('click', function() {
-		    	_this.$share.hide();
+		    	_this.$('.share').hide();
 		    });
 
 		    // 返回首页
-		    _this.$backHome.on('click', function() {
+		    _this.$('.back-home').on('click', function() {
 		    	window.location.href="../../index.html";
 		    });
 
 		    // 查看其它人
-		    _this.$otherPerson.on('click', function() {
+		    _this.$('.other-person').on('click', function() {
 		    	window.location.href="list.html";
 		    });
 		}
