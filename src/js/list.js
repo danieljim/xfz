@@ -1,29 +1,62 @@
 $(document).ready(function() {
 
 	var tpl = {
+		first : '<div class="head-rule-img"></div>'+
+                '<div class="head-time">'+
+                    '<span>投票时间：1月4日－10日</span>'+
+                    '<a class="look-rule">查看投票规则</a>'+
+                '</div>'+
+                '<ul>'+
+                    '<li>'+
+                        '<div class="photo">'+
+                            '<img src="<%=data.photo%>">'+
+                        '</div>'+
+                        '<div class="piao-count">100</div>'+
+                        '<div class="name"><%=data.name%></div>'+
+                        '<div class="company"><%=data.company%></div>'+
+                        '<div class="position"><%=data.position%></div>'+
+                    '</li>'+
+                '</ul>'
+                '<div class="rule">'+
+                    '<div>'+
+                        '<div>参选标准</div>'+
+                        '<ul>'+
+                            '<li>30岁以下（含1986年）</li>'+
+                            '<li>至少主要参与过3家创业公司投资</li>'+
+                            '<li>过去一年所投公司至少1家取得不错的成绩</li>'+
+                        '</ul>'+
+                    '</div>'+
+                    '<div>'+
+                        '<div>评选标准</div>'+
+                        '<ul>'+
+                            '<li>投资人所投公司数量、轮次与估值占70%权重</li>'+
+                            '<li>投资人口碑、影响力、行业洞察力占30%权重，由公开投票决定</li>'+
+                            '<li>最终排名，由两者加权计算后的分值得出，会在小饭桌创业春晚揭晓</li>'+
+                        '</ul>'+
+                    '</div>'+
+                    '<div>'+
+                        '<div>投票标准</div>'+
+                        '<ul>'+
+                            '<li>投票时间：1月4日-1月10日</li>'+
+                            '<li>每人只能投一次票</li>'+
+                            '<li>如果有恶意刷票等行为，会取消候选资格</li>'+
+                            '<li>最终解释权归小饭桌所有</li>'+
+                        '</ul>'+
+                    '</div>'+
+                    '<div class="back">立即投票</div>'+
+                '</div>',
 
-	    firstPage : '<ul class="list-1">'+
-	                    '<li data-uid="1">'+
-	                        '<div class="photo">'+
-	                           '<img src="http://img2.3lian.com/2014/f5/158/d/87.jpg">'+
-	                        '</div>'+
-	                        '<div class="piao-count">100</div>'+
-	                        '<div class="name"></div>'+
-	                        '<div class="company">北京子木投资顾问有限公司</div>'+
-	                        '<div class="position">前端开发</div>'+
-	                    '</li>'+
-	                '</ul>',
-		otherPage : '<ul class="list-2">'+
-	                    '<li>'+
-	                        '<div class="photo">'+
-	                            '<img src="<%=data.simgUrl%>">'+
-	                        '</div>'+
-	                        '<div class="piao-count">100</div>'+
-	                        '<div class="name"><%=data.name%></div>'+
-	                        '<div class="company"><%=data.company%></div>'+
-	                        '<div class="position"><%=data.position%></div>'+
-	                    '</li>'+
-	                '</ul>'
+		list : '<ul class="list-2">'+
+                    '<li>'+
+                        '<div class="photo">'+
+                            '<img src="<%=data.simgUrl%>">'+
+                        '</div>'+
+                        '<div class="piao-count">100</div>'+
+                        '<div class="name"><%=data.name%></div>'+
+                        '<div class="company"><%=data.company%></div>'+
+                        '<div class="position"><%=data.position%></div>'+
+                    '</li>'+
+                '</ul>'
 		            
 	};
 
@@ -34,7 +67,7 @@ $(document).ready(function() {
 			this.$swiperWrapper = $('.swiper-wrapper');
 			this.$rule = $('.look-rule');
 			this.$back = $('.back');
-			this.bind();
+			this.getList();
 		},
 
 		getList : function() {
@@ -66,7 +99,7 @@ $(document).ready(function() {
 						            "id": 16,
 						            "mainTitle": "",
 						            "subTitle": "",
-						            "simgUrl": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
 						            "name" : "王东杰",
 						            "company":"北京子木投资顾问有限公司",
 						            "position":"前端开发"
@@ -75,16 +108,20 @@ $(document).ready(function() {
 						            "id": 16,
 						            "mainTitle": "",
 						            "subTitle": "",
-						            "simgUrl": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
 						            "name" : "王东杰",
 						            "company":"北京子木投资顾问有限公司",
 						            "position":"前端开发"
 						        }
 						    ]
 						} ;
-			var first = template.compile(tpl.otherPage),
+			_this.dealList(data);
+		},
+
+		dealList : function(data) {
+			var first = template.compile(tpl.first),
                 html = first({data : data.data[0]});
-            $('.step-2').html(html);
+            $('.step-1').html(html);
             _this.bind();
 		},
 
@@ -95,7 +132,8 @@ $(document).ready(function() {
 		      	direction: 'vertical',
 		      	loop: false,
 		      	onSlideChangeStart: function(swiper){
-			    	_this.getList();
+		      		alert($('.swiper-slide').index());
+			    	_this.dealList();
 			    }
 		    });
 
