@@ -76,8 +76,8 @@ $(document).ready(function() {
                         '</div>'+
                         '<div class="piao-count"><%=list[i].count%></div>'+
                         '<div class="name"><%=list[i].name%></div>'+
-                        '<div class="company"><%=list[i].company%></div>'+
-                        '<div class="position"><%=list[i].worker%></div>'+
+                        '<div class="company"><%=list[i].project%></div>'+
+                        '<div class="position">第<%=list[i].session_number%>届桌友</div>'+
                     '</li>'+
                     '<%}%>'+
                 '</ul>'+
@@ -114,8 +114,8 @@ $(document).ready(function() {
 	                        '</div>'+
 	                        '<div class="piao-count"><%=list[i].count%></div>'+
 	                        '<div class="name"><%=list[i].name%></div>'+
-	                        '<div class="company"><%=list[i].company%></div>'+
-	                        '<div class="position"><%=list[i].worker%></div>'+
+	                        '<div class="company"><%=list[i].project%></div>'+
+	                        '<div class="position">第<%=list[i].session_number%>届桌友</div>'+
 	                    '</li>'+
 	                '<%}%>'+
 	            '</ul>',         
