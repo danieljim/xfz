@@ -112,6 +112,276 @@ $(document).ready(function() {
 						            "name" : "王东杰",
 						            "company":"北京子木投资顾问有限公司",
 						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
+						        },
+						        {
+						            "id": 16,
+						            "mainTitle": "",
+						            "subTitle": "",
+						            "photo": "http://spimg.qunarzz.com/gongyu/20150806/qunarbanner_150X60.jpg",
+						            "name" : "王东杰",
+						            "company":"北京子木投资顾问有限公司",
+						            "position":"前端开发"
 						        }
 						    ]
 						} ;
@@ -119,6 +389,13 @@ $(document).ready(function() {
 		},
 
 		dealList : function(data) {
+			var listArr1 = [data.data[0],data.data[1],data.data[2],data.data[3],data.data[4],data.data[5]];
+			var listArr2 = [data.data[6]];
+			var listArr3 = [data.data[12]];
+			var listArr4 = [data.data[18]];
+			var listArr5 = [data.data[24]];
+			var listArr6 = [data.data[30]];
+
 			var first = template.compile(tpl.first),
                 html = first({data : data.data[0]});
             $('.step-1').html(html);
